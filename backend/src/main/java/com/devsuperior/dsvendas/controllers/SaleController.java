@@ -2,7 +2,6 @@ package com.devsuperior.dsvendas.controllers;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
@@ -15,11 +14,13 @@ import com.devsuperior.dsvendas.dto.SaleSuccessDTO;
 import com.devsuperior.dsvendas.dto.SaleSumDTO;
 import com.devsuperior.dsvendas.services.SaleService;
 
+import lombok.AllArgsConstructor;
+
 @RestController
 @RequestMapping(value = "/sales")
+@AllArgsConstructor
 public class SaleController {
-
-	@Autowired
+	
 	private SaleService saleService;
 	
 	@GetMapping
